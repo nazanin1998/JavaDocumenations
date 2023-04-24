@@ -115,6 +115,38 @@ public class DomainInitializer implements CommandLineRunner {
 }
 ```
 
-***As you've seen we didn't do any setup for database and sql and hibernate. Spring data JPA do all those things for us ***
+As you've seen we didn't do any setup for database and sql and hibernate. Spring data JPA do all those things for us.
 
+## 6. SQL logging
+If you add below code to application.properties file, sql logs will appear.
+```
+spring.jpa.show-sql=true
+```
+
+But as you've understood, this log is not so friendly. Better way to do that is here. It's format logs.
+
+```
+# show SQL
+spring.jpa.properties.hibernate.show_sql=true
+
+# format SQL
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+## 7. H2 DataBase
+1. Enable h2 console
+```
+spring.h2.console.enabled=true
+```
+
+2. Run and see *H2ConsoleAutoConfiguration* value. For example:
+```
+o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:b6a3b46d-6bad-40e8-bbe9-abc9fc7ea2de'
+```
+3. Open chrome and paste *localhost:8080/h2-console'.
+
+4. Paste *jdbc:h2:mem:b6a3b46d-6bad-40e8-bbe9-abc9fc7ea2de* in JDBC URL.
+
+5. Click on connect.
+![H2 database console](/assets/h2.PNG)
 
