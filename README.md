@@ -19,3 +19,15 @@ Hiberante is a **Object Relational Mapping (ORM)** Tool which is also implements
 
 **SQL** => Persist data using relational data model.
 
+## What is SQL?
+* __Hibernate__ performs db operations using SQL.
+* __SQL__ - Structured Query Language.
+
+## What is JDBC?
+* **JDBC** - Java DB Connectivity.
+* JDBC is the Java API (interface) for connecting to db.
+* JDBC implementaion is known as _JDBC Driver_.
+* Each DB will have it's own JDBC Driver implementations.
+* JDBC Driver handles the low level communications with db.
+
+![Putting it all together](/assets/JPA.png)
