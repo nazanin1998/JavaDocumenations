@@ -31,3 +31,47 @@ Hiberante is a **Object Relational Mapping (ORM)** Tool which is also implements
 * JDBC Driver handles the low level communications with db.
 
 ![Putting it all together](/assets/JPA.PNG)
+
+## Initialize a project
+* Add these dependencies: spring web, spring data JPA, h2 db.
+
+## Domain
+* Create new package named "domain".
+* In domain you have entity files. 
+* Entity files start with **@Entity** annotaion.
+* Entity class also has id variable, that has **@Id** annotation.
+* Id variable can have **@GeneratedValue(strategy = GenerationType.AUTO)** that describe how to generate id value. 
+    * AUTO => Db handle value generation.
+    * TABLE
+    * SEQUENCE
+    * IDENTITY,
+    * UUID
+```
+@Entity
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String title;
+    private String isbn;
+    private String publisher;
+    .... // setter and getter and constructors
+}
+```
+* We can Override hashCode and equal methods to customize equalization conditions, and hashcode.
+```
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Book book = (Book) o;
+
+    return Objects.equals(id, book.id);
+}
+
+@Override
+public int hashCode() {
+    return id != null ? id.hashCode() : 0;
+}
+```
