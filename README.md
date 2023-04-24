@@ -30,4 +30,4 @@ Hiberante is a **Object Relational Mapping (ORM)** Tool which is also implements
 * Each DB will have it's own JDBC Driver implementations.
 * JDBC Driver handles the low level communications with db.
 
-![Putting it all together](/assets/JPA.png)
+![Putting it all together](/assets/JPA.PNG)
