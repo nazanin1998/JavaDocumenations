@@ -85,7 +85,7 @@ public interface BookRepositories extends JpaRepository<Book, Long> {
 ```
 
 ### BootStrap
-> If you want to run method exactly after runing application, put that method in class with annotaion of **@Component** and this class should implements **CommandLineRunner**. Write that method on *run* method.
+If you want to run method exactly after runing application, put that method in class with annotaion of **@Component** and this class should implements **CommandLineRunner**. Write that method on *run* method.
 
 ```
 @Component
@@ -114,6 +114,7 @@ public class DomainInitializer implements CommandLineRunner {
     }
 }
 ```
-> As you've seen we didn't do any setup for database and sql and hibernate. Spring data JPA do all those things for us.
+
+***As you've seen we didn't do any setup for database and sql and hibernate. Spring data JPA do all those things for us ***
 
 
