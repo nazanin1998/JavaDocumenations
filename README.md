@@ -75,3 +75,45 @@ public int hashCode() {
     return id != null ? id.hashCode() : 0;
 }
 ```
+
+## Repository
+You should make repository interface that handles all database using queries. This class should extend from JpaRepo.
+```
+public interface BookRepositories extends JpaRepository<Book, Long> {
+    
+}
+```
+
+## BootStrap
+If you want to run method exactly after runing application, put that method in class with annotaion of **@Component** and this class should implements **CommandLineRunner**. Write that method on *run* method.
+
+```
+@Component
+public class DomainInitializer implements CommandLineRunner {
+    private final BookRepositories bookRepositories;
+
+    public DomainInitializer(BookRepositories bookRepositories) {
+        this.bookRepositories = bookRepositories;
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        Book bookDDD = new Book("domain driven design", "123", "RandomHouse");
+        System.out.println("Id: "+ bookDDD.getId());
+        Book savedDDD = bookRepositories.save(bookDDD);
+        System.out.println("Id: "+ savedDDD.getId());
+
+        Book bookSIA = new Book("Spring in action", "12332", "Oriely");
+        Book savedSIA = bookRepositories.save(bookSIA);
+
+        bookRepositories.findAll().forEach(book -> {
+            System.out.println("book id: "+ book.getId());
+            System.out.println("book title: "+ book.getTitle());
+        });
+
+    }
+}
+```
+
+
+
