@@ -3,7 +3,7 @@ Persist database. like MYSQL that is free, scalable and popular.
 
 ### Spring data JPA is the JPA based version of data repository access of the spring data family. 
 
-## What is JPA?
+## 1. What is JPA?
 * **Spring data** has many implementations for varios data storing:
     * MongoDB, Redis, Cassandra, GemFile, CouchBase, Neo4J
 * **Sping data JPA** - is an abstraction layer built on top of JPA.
@@ -12,18 +12,18 @@ Persist database. like MYSQL that is free, scalable and popular.
 * **Hibernate** is an impl of JPA (JPA= is an *interface*, and not impl)
 * Other impls are TopLink, Apache OpenJPA, EclipseLink.
 
-## What is Hibernate?
+## 2. What is Hibernate?
 Hiberante is a **Object Relational Mapping (ORM)** Tool which is also implements the JPA API.
 
 **Java** => Object Oriented Programming Language.
 
 **SQL** => Persist data using relational data model.
 
-## What is SQL?
+## 3.What is SQL?
 * __Hibernate__ performs db operations using SQL.
 * __SQL__ - Structured Query Language.
 
-## What is JDBC?
+## 4. What is JDBC?
 * **JDBC** - Java DB Connectivity.
 * JDBC is the Java API (interface) for connecting to db.
 * JDBC implementaion is known as _JDBC Driver_.
@@ -32,10 +32,10 @@ Hiberante is a **Object Relational Mapping (ORM)** Tool which is also implements
 
 ![Putting it all together](/assets/JPA.PNG)
 
-## Initialize a project
+## 5. Initialize a project
 * Add these dependencies: spring web, spring data JPA, h2 db.
 
-## Domain
+### Domain
 * Create new package named "domain".
 * In domain you have entity files. 
 * Entity files start with **@Entity** annotaion.
@@ -76,7 +76,7 @@ public int hashCode() {
 }
 ```
 
-## Repository
+### Repository
 You should make repository interface that handles all database using queries. This class should extend from JpaRepo.
 ```
 public interface BookRepositories extends JpaRepository<Book, Long> {
@@ -84,7 +84,7 @@ public interface BookRepositories extends JpaRepository<Book, Long> {
 }
 ```
 
-## BootStrap
+### BootStrap
 If you want to run method exactly after runing application, put that method in class with annotaion of **@Component** and this class should implements **CommandLineRunner**. Write that method on *run* method.
 
 ```
