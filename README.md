@@ -148,5 +148,6 @@ o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'
 4. Paste *jdbc:h2:mem:b6a3b46d-6bad-40e8-bbe9-abc9fc7ea2de* in JDBC URL.
 
 5. Click on connect.
+
 ![H2 database console](/assets/h2.PNG)
 
