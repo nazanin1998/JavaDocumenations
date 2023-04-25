@@ -151,7 +151,7 @@ o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'
 
 ![H2 database console](/assets/h2.PNG)
 
-8. What is a database?
+## 8. What is a database?
 * "Database" is a set of related data and how it is organized.
 
 Database Managment systems (DBMS) have 4 important charachteristics:
@@ -160,7 +160,7 @@ Database Managment systems (DBMS) have 4 important charachteristics:
 * Data Retrieval
 * Administration
 
-## 8. Types of Databases:
+### Types of Databases:
 * __Flat file Database__: data kept in file. old system.
 * __Relational database__: have tables that have relation to each others.
 * __hierarchial databases__: data kept in tree structure.
