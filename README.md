@@ -166,3 +166,16 @@ Database Managment systems (DBMS) have 4 important charachteristics:
 * __hierarchial databases__: data kept in tree structure.
 * __NoSQL Database__: has variaty of data models. data models include Key-value store, Document based, Column based.
 * __Distributed/Cloud database__: run on manu server and its scalable and high available.
+
+## 9.Relational Databases:
+* Store data in tables which have relations to other tables.
+__SQL (Structured Query Language)__ .
+
+* Data is kept in __columns__ and __rows__.
+* __Primary key__ is an optional special database column or columns used to identify a database record. It should be unique.
+ 
+ * __Surrogate key__ is a type of Primary key which used a unique generated value.
+
+ * __Natural key__ is a type of Primary key which uses one or more data columns. And it supported by JPA.
+
+ 
