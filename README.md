@@ -1,18 +1,27 @@
-# MicroServices
-### MicroServices emerged from:
-* DDD (Domain-Driven Design)
-* Single Responsibilty Principle
+# JPA
+* Reduce bo ilerplate code.
+* Spring data jpa is repository abstraction on top of entity manager. and entity manager update the database.
+* Hibernate is default JPA provider.
 
-### Benifits of MicroServices:
-* Scalability
-* Modularity
-* Tech diversity
-* Cases migration
-* Resilence and availabilty
 
-1. Decompose project capabilties
-2. Develop one by one of mentioned capabilties.
-3. Each service must be independent. for example there not to be a single db that react with two microservices.
-3. Setup CI/CD pipelines to run automated test cases and deploy these services independently.
+## Basic flow of spring data JPA
 
+1. Service => 
+2. JPA repository => JPA repository impl => 
+3. JPA APIs => 4. Hibernate impl of JPA APIs => 
+5. JDBC basic APIs => 
+6. Database
+
+## JPA vs Hibernate
+- Spring data JPA = abstraction layer on top of JPA.
+
+- JPA = ORM to manage relational data.
+
+- Hibernate = impl of JPA
+
+# Init App
+### Dependency
+1. Spring data JPA
+2. MySQL Driver
+3. 
 
